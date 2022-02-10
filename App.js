@@ -4,8 +4,13 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <View style={styles.carContainer}>
+        <View style={styles.titles}>
+          <Text style={styles.title} >Model S</Text>
+          <Text style={styles.subtitle}>Starting at $634,00</Text>
+        </View>
+
+      </View>
     </View>
   );
 }
@@ -17,4 +22,24 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  carContainer: {
+    height: '100%',
+    width: '100%',
+
+  }
+  ,
+  titles: {
+
+    marginTop: '30%',
+    alignItems: 'center',
+    width: '100%',
+  },
+  title: {
+    fontSize: 40,
+    fontWeight: 'bold',
+  },
+  subtitle: {
+    fontSize: 16,
+    color: '#5c5c5c',
+  }
 });
