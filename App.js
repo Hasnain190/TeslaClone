@@ -1,16 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground } from 'react-native';
+import CarItem from './components/carItem';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.carContainer}>
-        <View style={styles.titles}>
-          <Text style={styles.title} >Model S</Text>
-          <Text style={styles.subtitle}>Starting at $634,00</Text>
-        </View>
+      <CarItem
+        name={'Model S'}
+        tagline={'Starting at $634,00'}
+        taglineCTA={'Touchless Delivery'}
+        image={require('./assets/images/ModelS.jpeg')}
 
-      </View>
+      />
     </View>
   );
 }
@@ -21,25 +22,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  carContainer: {
-    height: '100%',
-    width: '100%',
-
   }
-  ,
-  titles: {
 
-    marginTop: '30%',
-    alignItems: 'center',
-    width: '100%',
-  },
-  title: {
-    fontSize: 40,
-    fontWeight: 'bold',
-  },
-  subtitle: {
-    fontSize: 16,
-    color: '#5c5c5c',
-  }
 });
